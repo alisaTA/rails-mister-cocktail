@@ -1,10 +1,24 @@
 
 
-<h1>A Cocktail for Every Taste!</h1>
+<h1>Apero!</h1>
 <!-- <p>Find me in app/views/restaurants/index.html.erb</p> -->
+<div class="main-container">
+  <div class="cards">
+  <% @cocktails.each do |cocktail| %>
+    <% if cocktail.photo.present? %>
+      <div class="card" style="background-image: url(cocktail.photo)">
+        <h3><%= link_to cocktail.name, cocktail_path(cocktail) %></h3>
+        </div>
+      <% else %>
+      <div class="card">
+      <h3><%= link_to cocktail.name, cocktail_path(cocktail) %></h3>
+    </div>
+    <% end %>
+  <% end %>
+  </div>
+</div>
+
+<div>
+  <p>Add a cocktail</p>
 <%= render 'form', cocktail: @cocktail %>
-
-<% @cocktails.each do |cocktail| %>
-  <h1><%= link_to cocktail.name, cocktail_path(cocktail) %></h1>
-
-<% end %>
+</div>
