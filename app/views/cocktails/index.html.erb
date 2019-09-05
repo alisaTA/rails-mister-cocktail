@@ -2,6 +2,7 @@
 
 <h1>A Cocktail for Every Taste!</h1>
 <!-- <p>Find me in app/views/restaurants/index.html.erb</p> -->
+<%= render 'form', cocktail: @cocktail %>
 
 <% @cocktails.each do |cocktail| %>
   <h1><%= link_to cocktail.name, cocktail_path(cocktail) %></h1>
