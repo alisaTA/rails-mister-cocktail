@@ -1,4 +1,9 @@
 import 'bootstrap';
+import 'select2/dist/css/select2.css';
+
+import { initSelect2 } from '../components/init_select2';
+
+$(document).ready(() => initSelect2());
 /* eslint no-console:0 */
 // This file is automatically compiled by Webpack, along with any other files
 // present in this directory. You're encouraged to place your actual application logic in
@@ -17,3 +22,5 @@ import 'bootstrap';
 // const imagePath = (name) => images(name, true)
 
 console.log('Hello World from Webpacker')
+
+
