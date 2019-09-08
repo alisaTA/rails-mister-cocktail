@@ -3,7 +3,7 @@
   <% end %>
   <h1><%= @cocktail.name %></h1>
 
-  <div>
+  <div class="col-2">
     <ul><span>Ingredient List</span>
       <% @cocktail.doses.each do |dose| %>
       <li><%= dose.ingredient.name %> - <%= dose.description %></li>
@@ -11,7 +11,7 @@
     </ul>
 
   </div>
-  <div class=container >
+  <div class="col-3" >
     <div>
       <p>Add an ingredient to <%= @cocktail.name %></p>
       <%= simple_form_for [@cocktail, @dose] do |f| %>
